@@ -5,6 +5,8 @@ description      "Send collectd data to RightScale"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
 version          "0.3.15"
 
+depends "skeme"
+
 recipe "sys_monitoring::default", "Install monitoring plugin"
 recipe "sys_monitoring::add_file_stats", 'Monitors file size and last modified time in seconds'
 recipe "sys_monitoring::add_process_stats", 'Monitors process and thread count'

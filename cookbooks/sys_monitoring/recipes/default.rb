@@ -30,7 +30,9 @@ ruby 'setup monitoring' do
 end
 
 # Enable monitoring in the dashboard
-right_link_tag 'rs_monitoring:state=active'
+skeme_tag 'rs_monitoring:state=active' do
+  action :add
+end
 
 # Configure and enable monitoring script
 template File.join(RightScale::RightLinkConfig[:rs_root_path], '..', 'RightLinkService', 'scripts', 'monitoring.rb') do
